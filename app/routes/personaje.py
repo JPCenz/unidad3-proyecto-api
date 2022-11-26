@@ -1,6 +1,4 @@
 from flask import Blueprint, render_template, flash, redirect, url_for
-from app.forms import BookForm
-from app.models.book import Book
 from app.db import db 
 
 personaje = Blueprint("personaje", __name__)
