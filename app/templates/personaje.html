@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2><a href="/">HOME</a></h2>
+
+
+
+<h1>Nombre: {{personaje['name']}}</h1>
+
+
+<div class="col-md-5">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <img src="{{ personaje['image'] }}" alt="" srcset="">
+            <p>Status : {{ personaje['status'] }}</p>
+            <p>Specie : {{ personaje['species'] }}</p>
+            <p>Ubicacion : {{ personaje['location']['name'] }} </p>
+            
+            <p>Gender : {{ personaje['gender'] }}</p>
+            <p>Origin : {{personaje['origin']['name']}}</p>
+            <p>Type : {{ personaje['type'] }}</p>
+            <p>Created at : {{ personaje['created'] }}</p>
+
+        </div>
+    </div>
+    
+
+</div>
+
+
+{% endblock content %}

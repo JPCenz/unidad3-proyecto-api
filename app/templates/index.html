@@ -1,0 +1,26 @@
+{% extends "base.html" %} {% block content %}
+
+<h1>Rick and Morty Characters</h1>
+
+<div class="row" style="margin-top: 30px">
+  {% for personaje in personajes %}
+  <div class="col-md-3">
+    
+    <div class="panel panel-default">
+
+      <a href="{{ url_for('personaje.get_character', id= personaje['id']) }}">
+      <div class="panel-body">
+        <p>Name: {{ personaje['name'] }}</p>
+        <p>Status: {{ personaje['status'] }}</p>
+        <p>Specie: {{ personaje['species'] }}</p>
+        <p>Ubicacion: {{ personaje['location']['name'] }} </p>
+        <img src="{{ personaje['image'] }}" alt="" srcset="">
+        
+      </div>
+      </a>
+    </div>
+  </div>
+
+  {% endfor %}
+</div>
+{% endblock content %}
